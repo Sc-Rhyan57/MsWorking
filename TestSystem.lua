@@ -1,25 +1,11 @@
--- Carregando Orion Lib
-loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+-- Carrega o Orion Lib
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, SaveConfig = true, ConfigFolder = "Config"})
 
--- Carregando o sistema do GitHub
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Sc-Rhyan57/MsWorking/refs/heads/main/teste/"))()
-
-
-local Elementos = {
-    ["Elemento1"] = "https://raw.githubusercontent.com/Sc-Rhyan57/MsWorking/refs/heads/main/teste/MsText.lua"
-}
-
-function carregarElemento(elemento)
-    local sucesso, conteudo = pcall(function()
-        return loadstring(game:HttpGet(Elementos[elemento]))()
-    end)
-
-    if sucesso then
-        print(elemento .. " carregado com sucesso!")
-    else
-        warn("Erro ao carregar " .. elemento .. ": " .. conteudo)
-    end
-end
+-- Variável global para a janela, usada no script de elementos
+getgenv().nomeWindow = Window
 
 local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, SaveConfig = true})
-carregarElemento("Elemento1")
+loadstring(game:HttpGet("link_do_seu_script_de_elementos_aqui"))()
+
+OrionLib:Init()
