@@ -1,11 +1,9 @@
 -- Carrega o Orion Lib
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
-local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, SaveConfig = true, ConfigFolder = "Config"})
+local Window = OrionLib:MakeWindow({Name = "Minha Janela com API", HidePremium = false, SaveConfig = true, ConfigFolder = "Config"})
 
--- Variável global para a janela, usada no script de elementos
-getgenv().nomeWindow = Window
-
-local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, SaveConfig = true})
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Sc-Rhyan57/MsWorking/refs/heads/main/teste/MsText.lua"))()
+-- Puxa o script de elementos da API no GitHub e chama a função para adicionar os elementos
+local AdicionarElementos = loadstring(game:HttpGet("link_do_seu_script_no_github"))()
+AdicionarElementos(Window)
 
 OrionLib:Init()
