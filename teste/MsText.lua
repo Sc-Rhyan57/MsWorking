@@ -1,6 +1,6 @@
-print("[Minha API] API carregada com sucesso!")
-
 local function AdicionarElementos(Window)
+    print("[Minha API] API carregada com sucesso!")
+
     -- Adiciona um botão
     Window:AddButton({
         Name = "Clique Aqui",
