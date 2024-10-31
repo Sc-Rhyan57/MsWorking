@@ -6,6 +6,6 @@ local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, 
 getgenv().nomeWindow = Window
 
 local Window = OrionLib:MakeWindow({Name = "Minha Janela", HidePremium = false, SaveConfig = true})
-loadstring(game:HttpGet("link_do_seu_script_de_elementos_aqui"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sc-Rhyan57/MsWorking/refs/heads/main/teste/MsText.lua"))()
 
 OrionLib:Init()
