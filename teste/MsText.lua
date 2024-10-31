@@ -1,8 +1,8 @@
 print("[Minha API] API carregada com sucesso!")
 
-local function AdicionarElementos(window)
+local function AdicionarElementos(Window)
     -- Adiciona um botão
-    window:AddButton({
+    Window:AddButton({
         Name = "Clique Aqui",
         Callback = function()
             print("Botão clicado!")
@@ -10,7 +10,7 @@ local function AdicionarElementos(window)
     })
 
     -- Adiciona um slider
-    window:AddSlider({
+    Window:AddSlider({
         Name = "Volume",
         Min = 0,
         Max = 100,
@@ -21,7 +21,7 @@ local function AdicionarElementos(window)
     })
 
     -- Adiciona um toggle
-    window:AddToggle({
+    Window:AddToggle({
         Name = "Ativar Modo Noturno",
         Default = false,
         Callback = function(state)
@@ -30,7 +30,7 @@ local function AdicionarElementos(window)
     })
 
     -- Adiciona um dropdown
-    window:AddDropdown({
+    Window:AddDropdown({
         Name = "Escolha uma opção",
         Options = {"Opção 1", "Opção 2", "Opção 3"},
         Callback = function(selected)
